@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';  
+import React from 'react';
+import { StyleSheet, Text, View, TextInput, Dimensions } from 'react-native';
+import Svg, { Path, Defs, LinearGradient, Stop } from 'react-native-svg';  
+import Login from './screens/Login';
+import Registro from './screens/Registro';
+const { width, height } = Dimensions.get('window')
 
 export default function App() {
+   
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Registro />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
