@@ -3,9 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Dimensions, TouchableOpacity } from 'react-native';
 import Svg, { Path, Defs, LinearGradient, Stop } from 'react-native-svg';  
 const { width, height } = Dimensions.get('window')
+import { useNavigation } from '@react-navigation/native';
 
 export default function Registro() {
-   
+  const navigation = useNavigation(); 
   
   return (
     <View style={styles.container}>
@@ -40,8 +41,10 @@ export default function Registro() {
          
      </TouchableOpacity>
       
-      <Text style={styles.subTitle2}>No tienes cuenta, registrate</Text>
-
+      <Text style={styles.subTitle2}>¿Ya tienes una cuenta?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text className="text-sky-600">Iniciar Sesion</Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
