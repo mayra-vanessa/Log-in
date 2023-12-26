@@ -4,12 +4,16 @@ import { StyleSheet, Text, View, TextInput, Dimensions,TouchableOpacity, Activit
 const { width, height } = Dimensions.get('window')
 import { AuthContext } from "../../context/AuthContext";
 import { useNavigation } from '@react-navigation/native';
+import * as Global from "../../Global";
 
 export default function Login() {
   const navigation = useNavigation();
   const { signIn } = React.useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  const [username, setusername] = useState('');
+  const [password, setpassword] = useState('');
 
   const login = () => {
     setError('');
@@ -65,10 +69,12 @@ export default function Login() {
       <TextInput
         placeholder="Ingresa un correo"
         style={styles.textInput}
+        onChangeText={(val) => setusername(val)}
       />
       <TextInput
         placeholder="Contraseña"
         style={styles.textInput}
+        onChangeText={(val) => setpassword(val)}
       />
       
       <TouchableOpacity

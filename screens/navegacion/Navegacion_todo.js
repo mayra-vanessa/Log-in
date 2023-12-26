@@ -112,7 +112,7 @@ navigation.navigate(Submenu1Screen);
           barStyle={'light-content'}
         />
      <Tab.Navigator  screenOptions={{
-        tabBarActiveTintColor: '#3A9EC2',
+        tabBarActiveTintColor: PRIMARYCOLOR,
         tabBarActiveBackgroundColor: '#fff',
         tabBarInactiveTintColor: 'gray',
         tabBarInactiveBackgroundColor: '#fff',
@@ -146,7 +146,7 @@ navigation.navigate(Submenu1Screen);
         title="Configuración y Privacidad"
         expanded={expandedAccordion === 'Configuración'}
         onPress={() => setExpandedAccordion('Configuración')}
-        left={props => <List.Icon {...props} icon={() => <Icon4 name={'settings-outline'} size={window.height / 39} backgroundColor={"#fff"} color={"#777777"} />} />}>
+        left={props => <List.Icon {...props} icon={() => <Icon name={'google-analytics'} size={window.height / 39} backgroundColor={"#fff"} color={"#777777"} />} />}>
         {/* <List.Item style={{ backgroundColor: "#fff", height: window.height / 16, paddingLeft: window.width / 30 }} titleStyle={{ fontSize: window.width / 35, color: "#171F6D" }} onPress={RecuperarPass} title="Cambiar Contraseña" /> */}
         <List.Item style={{ backgroundColor: "#fff", height: window.height / 16, paddingLeft: window.width / 30 }} titleStyle={{ fontSize: window.width / 35, color: "#171F6D" }} onPress={cerrarsesion} title="Cerrar Sesión" />
         <List.Item style={{ backgroundColor: "#fff", height: window.height / 16, paddingLeft: window.width / 30 }} titleStyle={{ fontSize: window.width / 35, color: "#171F6D" }} /*onPress={EliminarCuenta}*/ title="Eliminar mi cuenta" />
