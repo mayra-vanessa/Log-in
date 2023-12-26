@@ -119,8 +119,8 @@ navigation.navigate(Submenu1Screen);
         headerShown: true,
       }}>
      <Tab.Screen name="Navegacionhome" component={Navegacionhome} options={{ title: 'Inicio', headerShown: false, headerTitleAlign: 'center',headerTintColor: 'white',headerTitleStyle: {fontSize: 24,}, tabBarIcon: ({ color, size }) => <Icon name={'home'} color={color} size={size}  />, }} />
-     <Tab.Screen name="Incidentes" component={Navegacion2} options={{ title: 'pantalla 2', headerShown: true,headerTitleAlign: 'center',headerTintColor: 'white',headerTitleStyle: {fontSize: 24,},headerStyle:{backgroundColor:PRIMARYCOLOR}, tabBarIcon: ({ color, size }) => <Icon name={'alarm-light-outline'} color={color} size={size}  />, }} />
-     <Tab.Screen name="Chat" component={Navegacion3} options={{ title: 'pantalla 3', headerShown: true,headerTitleAlign: 'center',headerTintColor: 'white',headerTitleStyle: {fontSize: 24,},headerStyle:{backgroundColor:PRIMARYCOLOR}, tabBarIcon: ({ color, size }) => <Icon name={'chat'} color={color} size={size}  />, }} />
+     <Tab.Screen name="segunda" component={Navegacion2} options={{ title: 'pantalla 2', headerShown: true,headerTitleAlign: 'center',headerTintColor: 'white',headerTitleStyle: {fontSize: 24,},headerStyle:{backgroundColor:PRIMARYCOLOR}, tabBarIcon: ({ color, size }) => <Icon name={'alarm-light-outline'} color={color} size={size}  />, }} />
+     <Tab.Screen name="tercera" component={Navegacion3} options={{ title: 'pantalla 3', headerShown: true,headerTitleAlign: 'center',headerTintColor: 'white',headerTitleStyle: {fontSize: 24,},headerStyle:{backgroundColor:PRIMARYCOLOR}, tabBarIcon: ({ color, size }) => <Icon name={'chat'} color={color} size={size}  />, }} />
      <Tab.Screen name="Menu" component={MenuScreen} listeners={({ navigation }) => ({ tabPress: (e) => { e.preventDefault(); }, })} options={{ tabBarOnPress: () => null, tabBarAccessibilityLabel: '', headerShown: false, tabBarVisible: false, tabBarIcon: ({ color, size }) => <Icon onPress={showModal} name={'menu'} color={color} size={size}  />, }} />
      </Tab.Navigator>
 
